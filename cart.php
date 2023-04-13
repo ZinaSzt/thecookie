@@ -1,7 +1,21 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/head.php';  // ajout du require ?>
+<?php session_start(); // début de la session ?>
+
 <section class="cookies container-fluid">
     <div class="row">
-        TODO : Display shopping cart items from $_SESSION here.
+    
+        <h2>Shopping Cart</h2>
+        <?php if (!empty($_SESSION['cart'])) {  
+            //  vérifier si le panier d'achat dans les données de session ($_SESSION['cart']) n'est pas vide ?>
+            <ul>
+                <?php foreach ($_SESSION['cart'] as $id => $cookie) {  //boucle foreach dans le tableau associatif qui représente le panier d'achat dans les données de session pour obtenir chaque élèment du panier?>
+                    <li><?= $cookie['name']; // affiche le nom du cookie?></li>
+                <?php } ?>
+            </ul>
+        <?php } else { ?>
+            <p>Oh non vous n'avez pas choisi de cookie...😭</p>
+        <?php } ?>
     </div>
 </section>
+
 <?php require 'inc/foot.php'; ?>

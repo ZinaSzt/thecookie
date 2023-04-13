@@ -1,5 +1,5 @@
 <?php
-
+// liste des produits disponibles sur le site 
 $catalog = [
     46 => [
         'name' => 'Pecan nuts',
