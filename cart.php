@@ -13,7 +13,7 @@
                 <?php } ?>
             </ul>
         <?php } else { ?>
-            <p>Oh non vous n'avez pas choisi de cookie...😭</p>
+            <p>veuillez choisir un cookie...</p>
         <?php } ?>
     </div>
 </section>
